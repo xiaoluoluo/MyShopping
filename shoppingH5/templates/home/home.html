@@ -1,0 +1,96 @@
+<ion-view title="&nbsp;" class="home">
+      <ion-nav-buttons side="left">
+      <i class="clogo"></i>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <a class="button button-icon icon ion-ios-search put" href="#/search"></a>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="home-slide">
+            <ion-slide-box does-continue="true" auto-play="true" slide-interval="1000">
+                <ion-slide>
+                    <img src="img/s-1.jpg"  >
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/s-2.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/s-3.jpg">
+                </ion-slide>
+                
+
+            </ion-slide-box>
+        </div>
+
+        <div class="first-list" >
+            <!--第一行-->
+            <div class="row row-h-2" >
+                <div class="col col-50" ng-click="gomap()" >
+                    <div class="calm-bg light c-h-2"  style="background-position: center;margin-left:auto; margin-right:auto;
+            background-image: url(img/store/wanda.jpg);background-repeat:no-repeat;">
+                       
+                        <i class="icon ion-home"></i>
+                         <div>万达</div>
+                    </div>
+                </div>
+
+                <div class="col col-50" ng-click="gomap()">
+                    <div class="royal-bg light c-h-2" style="background-position: center;margin-left:auto; margin-right:auto;
+            background-image: url(img/store/shuijincheng.jpg);background-repeat:no-repeat;">
+                        <i class="icon ion-person"></i>
+                        <div>水晶城</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--第二行-->
+            
+            <div class="row row-h-2" >
+                <div class="col col-50" ng-click="gomap()">
+                    <div class="calm-bg light c-h-2"  style="background-position: center;margin-left:auto; margin-right:auto;
+            background-image: url(img/store/yingtai.jpg);background-repeat:no-repeat;">
+                        
+                        <i class="icon ion-home"></i>
+                        <div>银泰</div>
+                    </div>
+                </div>
+
+                <div class="col col-50" ng-click="gomap()">
+                    <div class="royal-bg light c-h-2"style="background-position: center;margin-left:auto; margin-right:auto;
+            background-image: url(img/store/beicheng.jpg);background-repeat:no-repeat;">
+                        <i class="icon ion-person"></i>
+                        <div>北城天地</div>
+                    </div>
+                </div>
+
+            </div>
+            <!--第三行-->
+
+            <div class="row">
+                <div class="col">
+                    <div class="balanced-bg light">
+                        <div>屈臣氏</div>
+                        <i class="icon ion-image"></i>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="energized-bg light">
+                        <div>附近商城</div>
+                        <i class="icon ion-pricetag"></i>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="royal-bg light">
+                        <div>更多商城</div>
+                        <i class="icon ion-person-stalker"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

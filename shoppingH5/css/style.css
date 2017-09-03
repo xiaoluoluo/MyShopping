@@ -1,0 +1,79 @@
+/* Empty. Add your own CSS if you like */
+
+
+/*tab*/
+
+.tabs-color-positive .tab-item{
+    color:#999;
+}
+/*头部*/
+.clogo{width:200px;background:url(../img/fixed/logo.png) no-repeat 10px 4px;background-size:162px 26px;}
+
+/*home*/
+.home-slide ion-slide{
+
+    height: 25%;
+    width: 100%;
+
+}
+
+.home-slide ion-slide img{
+
+    height: 25%;
+    width: 100%;
+
+}
+.slider-pager{
+    bottom: 8px;
+}
+.slider-pager .slider-pager-page{
+    font-size: 5px;
+
+}
+
+
+
+/*首页块*/
+
+.row-h-2{
+    height:160px;
+
+}
+.c-h-2{
+    height: 144px;
+    padding-top:20%;
+
+}
+
+.toplist .subtabs a.button{background:#FFF;}
+.toplist .subtabs a.bt-active{color:#266de2;}
+.toplist .subtabs .button-bar{
+	background-image: linear-gradient(0deg,#dedede,#dedede 50%,transparent 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;}
+.toplist ion-item:first-child{border-top:none;}
+.toplist .fcars p span{float:left;color: #EF3C00;}
+/*商城图   */
+.stoermap .sty{background-color:#DBE0E4; border:1px white solid}
+.stoermap .top1{margin-top:32%;margin-left:3.5%;float: left;z-index: 998}
+.stoermap .top2{margin-top:50%;margin-right:31%;float: right;z-index: 995}
+.stoermap .toptime{font-size:20px; background: 0 0;color: #387ef5; }
+.stoermap .sign {width: 25px;padding:1; font-size:6px;background-color:white;border-width:1px; border-color: #387ef5;
+ background: 0 0;color: #387ef5;margin-left: 12px;margin-top: 27px }
+ .stoermap .signed {width: 30px;font-size:6px;background-color:white;border-width:1; border-color: red;
+ background: 0 0;color: red; margin-left: 44px}
+ .stoermap .signdi {width:80px;height:60px;background-color:#C8DEE5;margin-top: 10px}
+
+.first-list .col{
+
+    height:85px;
+    text-align:center;
+    line-height:32px;
+}
+.first-list .col.light div{
+    text-align:left;
+}
+.first-list .col .icon{
+    font-size:32px;
+}
