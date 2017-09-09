@@ -7,7 +7,7 @@ angular.module('starter.services', [])
 
 
         var ApiUrl = ENV.api,
-            // 用来存储话题类别的数据结构，包含了下一页、是否有下一页等属性
+        // 用来存储话题类别的数据结构，包含了下一页、是否有下一页等属性
             topics = {},
             catid = 20;
 
@@ -66,6 +66,50 @@ angular.module('starter.services', [])
 
                 return topics[catid].data;
 
+            },
+            getMoreTopics:function(){
+
+                //为了解决一步加载的时候数据还没有加载完成  然后请求loadMore的时候  找不到数据
+                if(topics[catid]===undefined){
+                    return false;
+                }
+
+                //获取以前的数据
+                var hasNextPage=topics[catid].hasNextPage;
+                var nextPage=topics[catid].nextPage;
+                var moreTopicsData=topics[catid].data;
+
+                console.log(moreTopicsData);
+
+                resource.query({
+                    catid:catid,
+                    page:nextPage
+                }, function (r) {
+
+                    nextPage++;
+
+                    if (r.result.length < 20) {  //来判断是否有下一页数据
+                        hasNextPage = false;
+                    }
+                    moreTopicsData=moreTopicsData.concat(r.result);
+                    topics[catid]={
+                        hasNextPage:hasNextPage,
+                        'nextPage': nextPage,
+                        'data': moreTopicsData
+                    }
+
+                    //在这里请求完成以后  通知controller
+
+
+                    $rootScope.$broadcast('PortalList.portalsUpdated');
+
+                })
+            },
+            hasNextPage: function() {
+                if (topics[catid] === undefined) {
+                    return false;
+                }
+                return topics[catid].hasNextPage;
             }
 
 

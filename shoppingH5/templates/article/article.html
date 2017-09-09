@@ -1,5 +1,9 @@
 <ion-view view-title="社区">
-    <ion-content>
+     <ion-content>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
 
         <ion-list class="topics_list">
             <ion-item class="item-thumbnail-left" collection-repeat="topic in portalListData" href="#/news_content/{{topic.aid}}"
@@ -11,6 +15,8 @@
                 </p>
             </ion-item>
         </ion-list>
-
+        <ion-infinite-scroll 
+          on-infinite="loadMore()"  distance="1%" ng-if="hasNextPage()">   
+        </ion-infinite-scroll>
     </ion-content>
 </ion-view>

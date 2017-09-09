@@ -1,0 +1,43 @@
+	#box {
+	width:470px;
+	height:150px;
+	background:url(images/0.jpg) no-repeat;
+	margin:50px auto ;
+	position:relative;
+	perspective: 1200px;
+}
+#box .pag1 {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform-style:preserve-3d;
+	transistion:1s all ease;
+	z-index:2;
+	transform-origin:left center ;
+}
+#box .pag1 span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	background: url(images/0.jpg) no-repeat right top;
+	transform: translateZ(1.1px);
+}
+.back {
+	background: url(images/1.jpg) no-repeat left top;
+	transform: translateZ(-1.1px) scale(-1,1);
+}
+.pag2 {
+	width:50%;
+	position:absolute;
+	right:0;
+	top:0;
+	height:100%;
+	background:url(images/1.jpg) no-repeat right top;
+	z-index:1;
+}

@@ -1,15 +1,33 @@
 <ion-view title="商城地图" class="stoermap" >
-    <ion-nav-buttons side="left">
-      <a class="button button-icon ion-ios-arrow-back" href="#/tab/home">返回</a>
-    </ion-nav-buttons>
+  
       <ion-nav-buttons side="right">
       <button class="button button-icon icon ion-android-share-alt" ng-disabled="showShare" ng-click="share()"></button>
     </ion-nav-buttons>
-<div class="content">
-	<div class="component">
-	  <p style="position:fixed;z-index:9999;height:50px;color:red; width:90px; vertical-align: middle;text-align:center;border: 1px solid blue;" ng-click="godetail()">店铺1</p>
-		<img class="resize-image" src="img/map7.png" alt="image for resizing">		
-	</div>
+ 
+<div id="floatdi">
+    	 <div   ng-if="show" ng-click="closejo()"  style="position: absolute;width: 100%;height: 100%;background: rgba(255, 255, 255, 0.34902);z-index: 1;opacity: 0.3"></div>
+    <div  class="fast"  ng-if="show"  style="background-color: {{div2Bg}};left:{{le}}px;top:{{to}}px;" >
+       <img src="img/user-bg.png">
+       
+         <a style="float:left;font-size:6px;">良品铺子：花籽，话梅,辣条......</a>
+         <span  ng-click="joinmap()">进入店铺</span>
+    </div>      
+  </div>
 
-</div>
+    
+    <div style="padding:1px;">
+        <div style="position:relative;width: 100%;height: 100%;overflow: hidden;border: 1px dashed white;" >
+           
+          <img id="targetObj" style="position:relative;" src="img/map/map7.png" usemap="#Map"/>
+     
+         <map name="Map">
+         <area id="area1" shape="rect" coords="92,422,186,470"  ng-click="demo1($event)" title="b界面" target="_blank">   
+         <area shape="rect" coords="505,550,554,585"    ng-click="demo1($event)" title="b界面" target="_blank">  
+         </map>
+
+    
+    </div>
+   </div>
+  
+  
 </ion-view>

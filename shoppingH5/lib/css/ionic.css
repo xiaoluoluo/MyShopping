@@ -7008,7 +7008,7 @@ a.button {
   display: -ms-flexbox;
   display: flex;
   padding: 3px;
-  width: 100%; }
+   }
 
 .row-wrap {
   -webkit-flex-wrap: wrap;

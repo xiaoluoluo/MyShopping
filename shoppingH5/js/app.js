@@ -114,6 +114,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',"s
 	  templateUrl: 'templates/home/stoermap.html',
 	  controller:'stoermap'
     })
+   .state('floorselect', {
+      url: '/floorselect',
+	  templateUrl: 'templates/home/floorselect.html',
+	  controller:'floorselect'
+    })
  
       ;
 

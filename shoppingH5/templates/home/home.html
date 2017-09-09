@@ -6,7 +6,7 @@
       <a class="button button-icon icon ion-ios-search put" href="#/search"></a>
     </ion-nav-buttons>
     <ion-content>
-        <div class="home-slide">
+        <!-- <div class="home-slide">
             <ion-slide-box does-continue="true" auto-play="true" slide-interval="1000">
                 <ion-slide>
                     <img src="img/s-1.jpg"  >
@@ -20,9 +20,16 @@
                 
 
             </ion-slide-box>
-        </div>
-
-        <div class="first-list" >
+        </div> -->
+      
+  <div id="carousel"  style=" position: relative;z-index: 2;height: 100px; transform-style: preserve-3d;perspective: 1000px;">
+    <img src="img/1.png" alt="#" >
+    <img src="img/2.png" alt="#" >
+    <img src="img/3.png" alt="#" >
+    <img src="img/4.png" alt="#" >
+    <img src="img/5.png" alt="#"  >
+  </div>
+        <div class="first-list" style="margin-top:20px;padding-top:88px" >
             <!--第一行-->
             <div class="row row-h-2" >
                 <div class="col col-50" ng-click="gomap()" >

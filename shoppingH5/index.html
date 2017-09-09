@@ -1,114 +1,59 @@
-
-<!DOCTYPE html>
-<html lang="zh">
+﻿<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>jquery图片移动查看插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
-	<style type="text/css">
-		pre code {
-	            	background: #ddd;
-	            	display: block;
-	            	padding: 10px;
-	            	-webkit-border-radius: 5px;
-	            	-moz-border-radius: 5px;
-	            	-o-border-radius: 5px;
-	            	border-radius: 5px;
-	            }
-	            #container {
-	            	margin: 0 auto;
-	            	width: 800px;
-	            }
-	            #wrapper {
-	                border: solid 5px #000;
-	                height: 400px;
-	                width: 100%;
-	                overflow: hidden;
-	            }
-	            #controls {
-	            	padding: 10px;
-	            }
-	                #controls span {
-	                	cursor: pointer;
-	                }
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
 
-	            .kinetic-moving-up {
-	                border-top-color: green !important;
-	            }
-	            .kinetic-moving-down {
-	                border-bottom-color: green !important;
-	            }
-	            .kinetic-moving-left {
-	                border-left-color: green !important;
-	            }
-	            .kinetic-moving-right {
-	                border-right-color: green !important;
-	            }
+    <link href="lib/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-	            .kinetic-decelerating-up {
-	                border-top-color: red !important;
-	            }
-	            .kinetic-decelerating-down {
-	                border-bottom-color: red !important;
-	            }
-	            .kinetic-decelerating-left {
-	                border-left-color: red !important;
-	            }
-	            .kinetic-decelerating-right {
-	                border-right-color: red !important;
-	            }
+    <!-- ionic/angularjs js -->
+    <script src="lib/js/ionic.bundle.js"></script>
+<!-- 拖动放缩 -->
+  <script type="text/javascript" src="js/touch.min.js"></script>
+    <script type="text/javascript" src="js/cat.touchjs.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <!-- 楼层选择 -->
+      
+    <script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+    <link href="css/bootstrap-3.3.4.css" rel="stylesheet">
+    <link href="css/font-awesome.4.6.0.css" rel="stylesheet">
+    <link href="css/effects.css" rel="stylesheet">
+  <link href="css/fanye.css" rel="stylesheet">
+ 
+    <!-- 轮播 -->
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="css/lbstyle.css"> <!-- Resource style -->
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
-	            #inner { width: 2000px; height: 100px; }
-	                #inner img {
-	                    display: block; 
-	                    width: 2000px;
-	                }
-	            #left, #right { cursor: pointer; }
-	</style>
+<script src="js/jquery.mobile.custom.min.js"></script>
+
+       <!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>  -->
+  <script src="js/carousel.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <link href='css/scroll.css' rel='stylesheet' type='text/css'>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="lib/js/angular/angular-resource.min.js"></script>
 </head>
-<body>
-	<div class="htmleaf-container">
-		<header class="htmleaf-header">
-			
-		</header>
-		<div id="container">
-	      
-	    
-	        <div id="wrapper">
-	            <div id="inner">
-	                <img src="img/test.jpg" alt="wembley stadium" />
-	            </div>
-	        </div>
-	   
-	</div>
-	
-	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="js/jquery.kinetic.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript">
-        	$('#wrapper').kinetic();
-
-                $('#left').click(function(){
-                    $('#wrapper').kinetic('start', { velocity: -10 });
-                });
-                $('#right').click(function(){
-                    $('#wrapper').kinetic('start', { velocity: 10 });
-                });
-                $('#end').click(function(){
-                    $('#wrapper').kinetic('end');
-                });
-                $('#stop').click(function(){
-                    $('#wrapper').kinetic('stop');
-                });
-                $('#detach').click(function(){
-                    $('#wrapper').kinetic('detach');
-                });
-                $('#attach').click(function(){
-                    $('#wrapper').kinetic('attach');
-                });
-        </script>
+<body ng-app="starter">
+<!--
+  The nav bar that will be updated as we navigate between views.
+-->
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<!--
+  The views will be rendered in the <ion-nav-view> directive below
+  Templates are in the /templates folder (but you could also
+  have templates inline in this html file if you'd like).
+-->
+<ion-nav-view></ion-nav-view>
 </body>
 </html>
